@@ -1,0 +1,35 @@
+.color-group {
+  padding-bottom: 16px;
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.color-swatch .color-swatch__preview {
+  padding: 16px;
+  min-height: 70px;
+  width: 75%;
+}
+
+.color-swatch .color-swatch__label {
+  padding: 16px;
+  min-width: 250px;
+  width: 100%;
+}
+
+.color-swatch .color-swatch__label .color-swatch__label--header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.private-tile {
+  border-radius: 0.1875rem;
+  background-color: #fff;
+  border: 1px solid #dfe3eb;
+  position: relative;
+}

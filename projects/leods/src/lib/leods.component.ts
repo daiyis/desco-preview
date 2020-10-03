@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
     <p>
       leods works!
     </p>
+    <button nz-button nzType="primary">Primary Button</button>
+    <nz-select ngModel="lucy" nzAllowClear nzPlaceHolder="Choose">
+      <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+    </nz-select>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class LeodsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

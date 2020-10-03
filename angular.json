@@ -13,7 +13,8 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/leods/tsconfig.lib.json",
-            "project": "projects/leods/ng-package.json"
+            "project": "projects/leods/ng-package.json",
+            "styles": ["node_modules/ng-zorro-antd/ng-zorro-antd.min.css"]
           },
           "configurations": {
             "production": {
@@ -32,16 +33,12 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/leods/tsconfig.lib.json",
-              "projects/leods/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/leods/tsconfig.lib.json", "projects/leods/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "leods"
 }

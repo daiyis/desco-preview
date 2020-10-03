@@ -178,7 +178,7 @@
         },
         {
             "name": "LeodsComponent",
-            "id": "component-LeodsComponent-6fb825d5f7d15b8a6dee911733501697",
+            "id": "component-LeodsComponent-02cbac19a5df154e2bcbd39b2582223f",
             "file": "projects/leods/src/lib/leods.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -188,7 +188,7 @@
             "selector": "lib-leods",
             "styleUrls": [],
             "styles": [],
-            "template": "<p>\n  leods works!\n</p>\n",
+            "template": "<p>\n  leods works!\n</p>\n<button nz-button nzType=\"primary\">Primary Button</button>\n<nz-select ngModel=\"lucy\" nzAllowClear nzPlaceHolder=\"Choose\">\n  <nz-option nzValue=\"lucy\" nzLabel=\"Lucy\"></nz-option>\n</nz-select>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [],
@@ -201,7 +201,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17
+                    "line": 19
                 }
             ],
             "hostBindings": [],
@@ -209,7 +209,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-leods',\n  template: `\n    <p>\n      leods works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class LeodsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-leods',\n  template: `\n    <p>\n      leods works!\n    </p>\n    <button nz-button nzType=\"primary\">Primary Button</button>\n    <nz-select ngModel=\"lucy\" nzAllowClear nzPlaceHolder=\"Choose\">\n      <nz-option nzValue=\"lucy\" nzLabel=\"Lucy\"></nz-option>\n    </nz-select>\n  `,\n  styles: [],\n})\nexport class LeodsComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -217,7 +217,7 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 13
+                "line": 16
             },
             "implements": [
                 "OnInit"
@@ -343,6 +343,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -383,6 +391,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -402,6 +418,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/stories/leods.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -428,6 +452,14 @@
                 "file": "stories/Page.stories.ts",
                 "type": "Story<Page>",
                 "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "Story<LeodsComponent>",
+                "defaultValue": "(args: LeodsComponent) => ({\n  component: LeodsComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],
@@ -493,6 +525,40 @@
                     "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
                 }
             ],
+            "projects/leods/src/lib/stories/leods.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                    "type": "Story<LeodsComponent>",
+                    "defaultValue": "(args: LeodsComponent) => ({\n  component: LeodsComponent,\n  props: args,\n})"
+                }
+            ],
             "stories/Header.stories.ts": [
                 {
                     "name": "LoggedIn",
@@ -552,7 +618,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -562,6 +628,46 @@
                 "name": "LeodsComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
