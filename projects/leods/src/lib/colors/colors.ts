@@ -1,7 +1,4 @@
 export const colors = [
-  '$color-base-white-0-transparent: #ffffff',
-  '$color-base-white-30: #ffffff',
-  '$color-base-white-50: #ffffff',
   '$color-base-grey-0: #ffffff',
   '$color-base-grey-5: #fcfcfc',
   '$color-base-grey-10: #f8f9fa',
