@@ -5,5 +5,5 @@ module.exports = {
     '../projects/leods/src/**/*.stories.mdx',
     '../projects/leods/src/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-a11y', 'storybook-design-token'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-a11y'],
 };

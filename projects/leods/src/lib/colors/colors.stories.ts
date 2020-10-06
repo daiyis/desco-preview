@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 export default {
-  title: 'JA Design System/Components/Colors',
+  title: 'JA Design System/Components/Colors-formdx',
   component: ColorsComponent,
   decorators: [
     moduleMetadata({

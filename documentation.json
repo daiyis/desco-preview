@@ -1,6 +1,33 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "Color",
+            "id": "interface-Color-dc162e5db171f6c39ba6c61b95a3b4c9",
+            "file": "projects/leods/src/lib/colors/colors.ts",
+            "type": "interface",
+            "sourceCode": "export const colors = [\n  '$color-base-grey-0: #ffffff',\n  '$color-base-grey-5: #fcfcfc',\n  '$color-base-grey-10: #f8f9fa',\n  '$color-base-grey-20: #f0f1f5',\n  '$color-base-grey-30: #dce0e7',\n  '$color-base-grey-40: #c9cfdb',\n  '$color-base-grey-50: #8792a7',\n  '$color-base-grey-60: #666e7d',\n  '$color-base-grey-70: #424957',\n  '$color-base-grey-80: #222b3d',\n  '$color-base-grey-90: #141a26',\n  '$color-base-grey-100: #000000',\n  '$color-base-blue-0: #f2fbff',\n  '$color-base-blue-5: #d9f1fc',\n  '$color-base-blue-10: #c0e7fa',\n  '$color-base-blue-20: #91d2f4',\n  '$color-base-blue-30: #68bdec',\n  '$color-base-blue-40: #46a6e1',\n  '$color-base-blue-50: #2c8cd4',\n  '$color-base-blue-60: #1971c2',\n  '$color-base-blue-70: #0d53b0',\n  '$color-base-blue-80: #06379a',\n  '$color-base-blue-90: #021f80',\n  '$color-base-blue-100: #000e66',\n  '$color-base-cyan-0: #f1fdff',\n  '$color-base-cyan-5: #cdf6ff',\n  '$color-base-cyan-10: #a9edff',\n  '$color-base-cyan-20: #6bd3fb',\n  '$color-base-cyan-30: #34b6f4',\n  '$color-base-cyan-40: #0697ed',\n  '$color-base-cyan-50: #0087d2',\n  '$color-base-cyan-60: #0078b7',\n  '$color-base-cyan-70: #00679b',\n  '$color-base-cyan-80: #005580',\n  '$color-base-cyan-90: #004365',\n  '$color-base-cyan-100: #00314a',\n  '$color-base-teal-0: #f2fffb',\n  '$color-base-teal-5: #dcfdf3',\n  '$color-base-teal-10: #c6fbeb',\n  '$color-base-teal-20: #99f0d7',\n  '$color-base-teal-30: #6fdec1',\n  '$color-base-teal-40: #4cc5a8',\n  '$color-base-teal-50: #30a58e',\n  '$color-base-teal-60: #1e8476',\n  '$color-base-teal-70: #126862',\n  '$color-base-teal-80: #0c5354',\n  '$color-base-teal-90: #084349',\n  '$color-base-teal-100: #063139',\n  '$color-base-mint-0: #f2fff7',\n  '$color-base-mint-5: #d3f5df',\n  '$color-base-mint-10: #b5ebc8',\n  '$color-base-mint-20: #80d6a0',\n  '$color-base-mint-30: #56c280',\n  '$color-base-mint-40: #37ad67',\n  '$color-base-mint-50: #219955',\n  '$color-base-mint-60: #138549',\n  '$color-base-mint-70: #09703f',\n  '$color-base-mint-80: #045c37',\n  '$color-base-mint-90: #01472e',\n  '$color-base-mint-100: #003323',\n  '$color-base-green-0: #f7fff2',\n  '$color-base-green-5: #def5d3',\n  '$color-base-green-10: #c7ebb6',\n  '$color-base-green-20: #9bd781',\n  '$color-base-green-30: #76c357',\n  '$color-base-green-40: #56af38',\n  '$color-base-green-50: #3b9c22',\n  '$color-base-green-60: #248813',\n  '$color-base-green-70: #11740a',\n  '$color-base-green-80: #046005',\n  '$color-base-green-90: #014c08',\n  '$color-base-green-100: #003809',\n  '$color-base-yellow-0: #fffff0',\n  '$color-base-yellow-5: #fefed6',\n  '$color-base-yellow-10: #fdfcbd',\n  '$color-base-yellow-20: #f9f78c',\n  '$color-base-yellow-30: #f4ed61',\n  '$color-base-yellow-40: #ecde3e',\n  '$color-base-yellow-50: #e2ca23',\n  '$color-base-yellow-60: #d4b10f',\n  '$color-base-yellow-70: #c39302',\n  '$color-base-yellow-80: #af7500',\n  '$color-base-yellow-90: #975a00',\n  '$color-base-yellow-100: #804200',\n  '$color-base-amber-0: #fffaf0',\n  '$color-base-amber-5: #fef1d6',\n  '$color-base-amber-10: #fde7bd',\n  '$color-base-amber-20: #f9d38c',\n  '$color-base-amber-30: #f4be61',\n  '$color-base-amber-40: #eca83e',\n  '$color-base-amber-50: #e29223',\n  '$color-base-amber-60: #d47a0f',\n  '$color-base-amber-70: #c36102',\n  '$color-base-amber-80: #af4d00',\n  '$color-base-amber-90: #973a00',\n  '$color-base-amber-100: #802a00',\n  '$color-base-orange-0: #fff5f0',\n  '$color-base-orange-5: #fee3d6',\n  '$color-base-orange-10: #fdd2bd',\n  '$color-base-orange-20: #f8af8c',\n  '$color-base-orange-30: #f28f60',\n  '$color-base-orange-40: #e8723d',\n  '$color-base-orange-50: #dc5922',\n  '$color-base-orange-60: #cc430e',\n  '$color-base-orange-70: #b73002',\n  '$color-base-orange-80: #9f2500',\n  '$color-base-orange-90: #831b00',\n  '$color-base-orange-100: #661300',\n  '$color-base-red-0: #fff3f2',\n  '$color-base-red-5: #ffe2df',\n  '$color-base-red-10: #ffcfcc',\n  '$color-base-red-20: #ffa8a3',\n  '$color-base-red-30: #fd837d',\n  '$color-base-red-40: #f7635e',\n  '$color-base-red-50: #ed4745',\n  '$color-base-red-60: #e03131',\n  '$color-base-red-70: #c62222',\n  '$color-base-red-80: #a91717',\n  '$color-base-red-90: #880f0f',\n  '$color-base-red-100: #660a0a',\n  '$color-base-pink-0: #fff2f7',\n  '$color-base-pink-5: #fedde8',\n  '$color-base-pink-10: #fdc8d9',\n  '$color-base-pink-20: #f89ebc',\n  '$color-base-pink-30: #f278a1',\n  '$color-base-pink-40: #e85989',\n  '$color-base-pink-50: #dc4175',\n  '$color-base-pink-60: #cc2e63',\n  '$color-base-pink-70: #b72052',\n  '$color-base-pink-80: #9f1643',\n  '$color-base-pink-90: #830f35',\n  '$color-base-pink-100: #660a29',\n  '$color-base-magenta-0: #fff2f9',\n  '$color-base-magenta-5: #ffdeee',\n  '$color-base-magenta-10: #fec9e3',\n  '$color-base-magenta-20: #fba0cb',\n  '$color-base-magenta-30: #f57bb5',\n  '$color-base-magenta-40: #ed5ca2',\n  '$color-base-magenta-50: #e14392',\n  '$color-base-magenta-60: #d23085',\n  '$color-base-magenta-70: #bc217d',\n  '$color-base-magenta-80: #a21774',\n  '$color-base-magenta-90: #840f66',\n  '$color-base-magenta-100: #660a55',\n  '$color-base-purple-0: #f9f6ff',\n  '$color-base-purple-5: #ede5fe',\n  '$color-base-purple-10: #e2d5fd',\n  '$color-base-purple-20: #cab3f9',\n  '$color-base-purple-30: #b395f4',\n  '$color-base-purple-40: #9e7bec',\n  '$color-base-purple-50: #8a66e2',\n  '$color-base-purple-60: #7755d4',\n  '$color-base-purple-70: #6546c3',\n  '$color-base-purple-80: #533aaf',\n  '$color-base-purple-90: #432f97',\n  '$color-base-purple-100: #352680',\n  '$color-base-indigo-0: #f6f6ff',\n  '$color-base-indigo-5: #e5e5fe',\n  '$color-base-indigo-10: #d4d5fd',\n  '$color-base-indigo-20: #b3b4f8',\n  '$color-base-indigo-30: #9497f2',\n  '$color-base-indigo-40: #7980e8',\n  '$color-base-indigo-50: #636edc',\n  '$color-base-indigo-60: #5160cc',\n  '$color-base-indigo-70: #4256b7',\n  '$color-base-indigo-80: #344c9f',\n  '$color-base-indigo-90: #294283',\n  '$color-base-indigo-100: #1f3666',\n  '$color-primary-white-grey-0: #ffffff',\n  '$color-primary-jobads-cyan-40: #0697ed',\n  '$color-primary-brand-blue-60: #1971c2',\n  '$color-primary-jobs-blue-70: #0d53b0',\n  '$color-primary-candidates-mint-50: #219955',\n  '$color-primary-placements-teal-50: #30a58e',\n  '$color-primary-contacts-orange-50: #dc5922',\n  '$color-primary-companies-pink-50: #dc4175',\n  '$color-primary-applications-purple-60: #7755d4',\n  '$color-status-error-red-60: #e03131',\n  '$color-status-warning-amber-40: #eca83e',\n  '$color-status-succss-green-40: #56af38',\n];\n\nexport interface Color {\n  name: string;\n  value: string;\n}\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 185
+                },
+                {
+                    "name": "value",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 186
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        }
+    ],
     "injectables": [],
     "classes": [],
     "directives": [],
@@ -85,6 +112,130 @@
                     }
                 }
             }
+        },
+        {
+            "name": "ColorCardComponent",
+            "id": "component-ColorCardComponent-3d5f404a609a1cce48040701923a09e0",
+            "file": "projects/leods/src/lib/colors/color-card/color-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-color-card",
+            "styleUrls": [
+                "./color-card.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./color-card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "line": 10,
+                    "type": "Color"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Color } from './../colors';\nimport { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-color-card',\n  templateUrl: './color-card.component.html',\n  styleUrls: ['./color-card.component.css'],\n})\nexport class ColorCardComponent implements OnInit {\n  @Input() color: Color;\n\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".color-group {\n  padding-bottom: 16px;\n}\n\n.color-swatch {\n  display: flex;\n  flex-direction: row;\n  background-color: #fff;\n  margin-bottom: 1.25rem;\n}\n\n.color-swatch .color-swatch__preview {\n  padding: 16px;\n  min-height: 70px;\n  width: 75%;\n}\n\n.color-swatch .color-swatch__label {\n  padding: 16px;\n  min-width: 250px;\n  width: 100%;\n}\n\n.color-swatch .color-swatch__label .color-swatch__label--header {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n}\n\n.private-tile {\n  border-radius: 0.1875rem;\n  background-color: #fff;\n  border: 1px solid #dfe3eb;\n  position: relative;\n}\n",
+                    "styleUrl": "./color-card.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"private-tile private-tile--spaced color-swatch\">\n  <div class=\"color-swatch__preview\" [ngStyle]=\"{ 'background-color': color.value }\">\n    <!-- <p>Primary</p> -->\n  </div>\n  <div class=\"color-swatch__label has--vertical-spacing\">\n    <div class=\"color-swatch__label--header\">\n      <h5 class=\"is--heading-6 m-bottom-0\">{{ color.name }}</h5>\n      <code>{{ color.value }}</code>\n    </div>\n    <!-- <p>{{ color.name }}</p> -->\n  </div>\n</div>\n"
+        },
+        {
+            "name": "ColorsComponent",
+            "id": "component-ColorsComponent-57055883d901f1ab200499de5a77b5be",
+            "file": "projects/leods/src/lib/colors/colors.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-colors",
+            "styleUrls": [
+                "./colors.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./colors.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "colors",
+                    "line": 10,
+                    "type": "Color[]"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { colors, Color } from './colors';\n\n@Component({\n  selector: 'lib-colors',\n  templateUrl: './colors.component.html',\n  styleUrls: ['./colors.component.css'],\n})\nexport class ColorsComponent implements OnInit {\n  @Input() colors: Color[];\n\n  constructor() {}\n\n  ngOnInit(): void {\n    this.colors = colors.map((x) => {\n      const c = x.split(':');\n      return {\n        name: c[0],\n        value: c[1],\n      };\n    });\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./colors.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<ng-container *ngFor=\"let color of colors\">\n  <lib-color-card [color]=\"color\"></lib-color-card>\n</ng-container>\n"
         },
         {
             "name": "FigmaComponent",
@@ -297,6 +448,12 @@
                     "type": "declarations",
                     "elements": [
                         {
+                            "name": "ColorCardComponent"
+                        },
+                        {
+                            "name": "ColorsComponent"
+                        },
+                        {
                             "name": "LeodsComponent"
                         }
                     ]
@@ -326,6 +483,14 @@
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "colors",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/colors/colors.ts",
+                "type": "[]",
+                "defaultValue": "[\n  '$color-base-grey-0: #ffffff',\n  '$color-base-grey-5: #fcfcfc',\n  '$color-base-grey-10: #f8f9fa',\n  '$color-base-grey-20: #f0f1f5',\n  '$color-base-grey-30: #dce0e7',\n  '$color-base-grey-40: #c9cfdb',\n  '$color-base-grey-50: #8792a7',\n  '$color-base-grey-60: #666e7d',\n  '$color-base-grey-70: #424957',\n  '$color-base-grey-80: #222b3d',\n  '$color-base-grey-90: #141a26',\n  '$color-base-grey-100: #000000',\n  '$color-base-blue-0: #f2fbff',\n  '$color-base-blue-5: #d9f1fc',\n  '$color-base-blue-10: #c0e7fa',\n  '$color-base-blue-20: #91d2f4',\n  '$color-base-blue-30: #68bdec',\n  '$color-base-blue-40: #46a6e1',\n  '$color-base-blue-50: #2c8cd4',\n  '$color-base-blue-60: #1971c2',\n  '$color-base-blue-70: #0d53b0',\n  '$color-base-blue-80: #06379a',\n  '$color-base-blue-90: #021f80',\n  '$color-base-blue-100: #000e66',\n  '$color-base-cyan-0: #f1fdff',\n  '$color-base-cyan-5: #cdf6ff',\n  '$color-base-cyan-10: #a9edff',\n  '$color-base-cyan-20: #6bd3fb',\n  '$color-base-cyan-30: #34b6f4',\n  '$color-base-cyan-40: #0697ed',\n  '$color-base-cyan-50: #0087d2',\n  '$color-base-cyan-60: #0078b7',\n  '$color-base-cyan-70: #00679b',\n  '$color-base-cyan-80: #005580',\n  '$color-base-cyan-90: #004365',\n  '$color-base-cyan-100: #00314a',\n  '$color-base-teal-0: #f2fffb',\n  '$color-base-teal-5: #dcfdf3',\n  '$color-base-teal-10: #c6fbeb',\n  '$color-base-teal-20: #99f0d7',\n  '$color-base-teal-30: #6fdec1',\n  '$color-base-teal-40: #4cc5a8',\n  '$color-base-teal-50: #30a58e',\n  '$color-base-teal-60: #1e8476',\n  '$color-base-teal-70: #126862',\n  '$color-base-teal-80: #0c5354',\n  '$color-base-teal-90: #084349',\n  '$color-base-teal-100: #063139',\n  '$color-base-mint-0: #f2fff7',\n  '$color-base-mint-5: #d3f5df',\n  '$color-base-mint-10: #b5ebc8',\n  '$color-base-mint-20: #80d6a0',\n  '$color-base-mint-30: #56c280',\n  '$color-base-mint-40: #37ad67',\n  '$color-base-mint-50: #219955',\n  '$color-base-mint-60: #138549',\n  '$color-base-mint-70: #09703f',\n  '$color-base-mint-80: #045c37',\n  '$color-base-mint-90: #01472e',\n  '$color-base-mint-100: #003323',\n  '$color-base-green-0: #f7fff2',\n  '$color-base-green-5: #def5d3',\n  '$color-base-green-10: #c7ebb6',\n  '$color-base-green-20: #9bd781',\n  '$color-base-green-30: #76c357',\n  '$color-base-green-40: #56af38',\n  '$color-base-green-50: #3b9c22',\n  '$color-base-green-60: #248813',\n  '$color-base-green-70: #11740a',\n  '$color-base-green-80: #046005',\n  '$color-base-green-90: #014c08',\n  '$color-base-green-100: #003809',\n  '$color-base-yellow-0: #fffff0',\n  '$color-base-yellow-5: #fefed6',\n  '$color-base-yellow-10: #fdfcbd',\n  '$color-base-yellow-20: #f9f78c',\n  '$color-base-yellow-30: #f4ed61',\n  '$color-base-yellow-40: #ecde3e',\n  '$color-base-yellow-50: #e2ca23',\n  '$color-base-yellow-60: #d4b10f',\n  '$color-base-yellow-70: #c39302',\n  '$color-base-yellow-80: #af7500',\n  '$color-base-yellow-90: #975a00',\n  '$color-base-yellow-100: #804200',\n  '$color-base-amber-0: #fffaf0',\n  '$color-base-amber-5: #fef1d6',\n  '$color-base-amber-10: #fde7bd',\n  '$color-base-amber-20: #f9d38c',\n  '$color-base-amber-30: #f4be61',\n  '$color-base-amber-40: #eca83e',\n  '$color-base-amber-50: #e29223',\n  '$color-base-amber-60: #d47a0f',\n  '$color-base-amber-70: #c36102',\n  '$color-base-amber-80: #af4d00',\n  '$color-base-amber-90: #973a00',\n  '$color-base-amber-100: #802a00',\n  '$color-base-orange-0: #fff5f0',\n  '$color-base-orange-5: #fee3d6',\n  '$color-base-orange-10: #fdd2bd',\n  '$color-base-orange-20: #f8af8c',\n  '$color-base-orange-30: #f28f60',\n  '$color-base-orange-40: #e8723d',\n  '$color-base-orange-50: #dc5922',\n  '$color-base-orange-60: #cc430e',\n  '$color-base-orange-70: #b73002',\n  '$color-base-orange-80: #9f2500',\n  '$color-base-orange-90: #831b00',\n  '$color-base-orange-100: #661300',\n  '$color-base-red-0: #fff3f2',\n  '$color-base-red-5: #ffe2df',\n  '$color-base-red-10: #ffcfcc',\n  '$color-base-red-20: #ffa8a3',\n  '$color-base-red-30: #fd837d',\n  '$color-base-red-40: #f7635e',\n  '$color-base-red-50: #ed4745',\n  '$color-base-red-60: #e03131',\n  '$color-base-red-70: #c62222',\n  '$color-base-red-80: #a91717',\n  '$color-base-red-90: #880f0f',\n  '$color-base-red-100: #660a0a',\n  '$color-base-pink-0: #fff2f7',\n  '$color-base-pink-5: #fedde8',\n  '$color-base-pink-10: #fdc8d9',\n  '$color-base-pink-20: #f89ebc',\n  '$color-base-pink-30: #f278a1',\n  '$color-base-pink-40: #e85989',\n  '$color-base-pink-50: #dc4175',\n  '$color-base-pink-60: #cc2e63',\n  '$color-base-pink-70: #b72052',\n  '$color-base-pink-80: #9f1643',\n  '$color-base-pink-90: #830f35',\n  '$color-base-pink-100: #660a29',\n  '$color-base-magenta-0: #fff2f9',\n  '$color-base-magenta-5: #ffdeee',\n  '$color-base-magenta-10: #fec9e3',\n  '$color-base-magenta-20: #fba0cb',\n  '$color-base-magenta-30: #f57bb5',\n  '$color-base-magenta-40: #ed5ca2',\n  '$color-base-magenta-50: #e14392',\n  '$color-base-magenta-60: #d23085',\n  '$color-base-magenta-70: #bc217d',\n  '$color-base-magenta-80: #a21774',\n  '$color-base-magenta-90: #840f66',\n  '$color-base-magenta-100: #660a55',\n  '$color-base-purple-0: #f9f6ff',\n  '$color-base-purple-5: #ede5fe',\n  '$color-base-purple-10: #e2d5fd',\n  '$color-base-purple-20: #cab3f9',\n  '$color-base-purple-30: #b395f4',\n  '$color-base-purple-40: #9e7bec',\n  '$color-base-purple-50: #8a66e2',\n  '$color-base-purple-60: #7755d4',\n  '$color-base-purple-70: #6546c3',\n  '$color-base-purple-80: #533aaf',\n  '$color-base-purple-90: #432f97',\n  '$color-base-purple-100: #352680',\n  '$color-base-indigo-0: #f6f6ff',\n  '$color-base-indigo-5: #e5e5fe',\n  '$color-base-indigo-10: #d4d5fd',\n  '$color-base-indigo-20: #b3b4f8',\n  '$color-base-indigo-30: #9497f2',\n  '$color-base-indigo-40: #7980e8',\n  '$color-base-indigo-50: #636edc',\n  '$color-base-indigo-60: #5160cc',\n  '$color-base-indigo-70: #4256b7',\n  '$color-base-indigo-80: #344c9f',\n  '$color-base-indigo-90: #294283',\n  '$color-base-indigo-100: #1f3666',\n  '$color-primary-white-grey-0: #ffffff',\n  '$color-primary-jobads-cyan-40: #0697ed',\n  '$color-primary-brand-blue-60: #1971c2',\n  '$color-primary-jobs-blue-70: #0d53b0',\n  '$color-primary-candidates-mint-50: #219955',\n  '$color-primary-placements-teal-50: #30a58e',\n  '$color-primary-contacts-orange-50: #dc5922',\n  '$color-primary-companies-pink-50: #dc4175',\n  '$color-primary-applications-purple-60: #7755d4',\n  '$color-status-error-red-60: #e03131',\n  '$color-status-warning-amber-40: #eca83e',\n  '$color-status-succss-green-40: #56af38',\n]"
+            },
             {
                 "name": "context",
                 "ctype": "miscellaneous",
@@ -387,6 +552,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -457,6 +630,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "Story<ColorsComponent>",
+                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/leods/src/lib/stories/leods.stories.ts",
                 "type": "Story<LeodsComponent>",
                 "defaultValue": "(args: LeodsComponent) => ({\n  component: LeodsComponent,\n  props: args,\n})"
@@ -466,6 +647,16 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "projects/leods/src/lib/colors/colors.ts": [
+                {
+                    "name": "colors",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/colors/colors.ts",
+                    "type": "[]",
+                    "defaultValue": "[\n  '$color-base-grey-0: #ffffff',\n  '$color-base-grey-5: #fcfcfc',\n  '$color-base-grey-10: #f8f9fa',\n  '$color-base-grey-20: #f0f1f5',\n  '$color-base-grey-30: #dce0e7',\n  '$color-base-grey-40: #c9cfdb',\n  '$color-base-grey-50: #8792a7',\n  '$color-base-grey-60: #666e7d',\n  '$color-base-grey-70: #424957',\n  '$color-base-grey-80: #222b3d',\n  '$color-base-grey-90: #141a26',\n  '$color-base-grey-100: #000000',\n  '$color-base-blue-0: #f2fbff',\n  '$color-base-blue-5: #d9f1fc',\n  '$color-base-blue-10: #c0e7fa',\n  '$color-base-blue-20: #91d2f4',\n  '$color-base-blue-30: #68bdec',\n  '$color-base-blue-40: #46a6e1',\n  '$color-base-blue-50: #2c8cd4',\n  '$color-base-blue-60: #1971c2',\n  '$color-base-blue-70: #0d53b0',\n  '$color-base-blue-80: #06379a',\n  '$color-base-blue-90: #021f80',\n  '$color-base-blue-100: #000e66',\n  '$color-base-cyan-0: #f1fdff',\n  '$color-base-cyan-5: #cdf6ff',\n  '$color-base-cyan-10: #a9edff',\n  '$color-base-cyan-20: #6bd3fb',\n  '$color-base-cyan-30: #34b6f4',\n  '$color-base-cyan-40: #0697ed',\n  '$color-base-cyan-50: #0087d2',\n  '$color-base-cyan-60: #0078b7',\n  '$color-base-cyan-70: #00679b',\n  '$color-base-cyan-80: #005580',\n  '$color-base-cyan-90: #004365',\n  '$color-base-cyan-100: #00314a',\n  '$color-base-teal-0: #f2fffb',\n  '$color-base-teal-5: #dcfdf3',\n  '$color-base-teal-10: #c6fbeb',\n  '$color-base-teal-20: #99f0d7',\n  '$color-base-teal-30: #6fdec1',\n  '$color-base-teal-40: #4cc5a8',\n  '$color-base-teal-50: #30a58e',\n  '$color-base-teal-60: #1e8476',\n  '$color-base-teal-70: #126862',\n  '$color-base-teal-80: #0c5354',\n  '$color-base-teal-90: #084349',\n  '$color-base-teal-100: #063139',\n  '$color-base-mint-0: #f2fff7',\n  '$color-base-mint-5: #d3f5df',\n  '$color-base-mint-10: #b5ebc8',\n  '$color-base-mint-20: #80d6a0',\n  '$color-base-mint-30: #56c280',\n  '$color-base-mint-40: #37ad67',\n  '$color-base-mint-50: #219955',\n  '$color-base-mint-60: #138549',\n  '$color-base-mint-70: #09703f',\n  '$color-base-mint-80: #045c37',\n  '$color-base-mint-90: #01472e',\n  '$color-base-mint-100: #003323',\n  '$color-base-green-0: #f7fff2',\n  '$color-base-green-5: #def5d3',\n  '$color-base-green-10: #c7ebb6',\n  '$color-base-green-20: #9bd781',\n  '$color-base-green-30: #76c357',\n  '$color-base-green-40: #56af38',\n  '$color-base-green-50: #3b9c22',\n  '$color-base-green-60: #248813',\n  '$color-base-green-70: #11740a',\n  '$color-base-green-80: #046005',\n  '$color-base-green-90: #014c08',\n  '$color-base-green-100: #003809',\n  '$color-base-yellow-0: #fffff0',\n  '$color-base-yellow-5: #fefed6',\n  '$color-base-yellow-10: #fdfcbd',\n  '$color-base-yellow-20: #f9f78c',\n  '$color-base-yellow-30: #f4ed61',\n  '$color-base-yellow-40: #ecde3e',\n  '$color-base-yellow-50: #e2ca23',\n  '$color-base-yellow-60: #d4b10f',\n  '$color-base-yellow-70: #c39302',\n  '$color-base-yellow-80: #af7500',\n  '$color-base-yellow-90: #975a00',\n  '$color-base-yellow-100: #804200',\n  '$color-base-amber-0: #fffaf0',\n  '$color-base-amber-5: #fef1d6',\n  '$color-base-amber-10: #fde7bd',\n  '$color-base-amber-20: #f9d38c',\n  '$color-base-amber-30: #f4be61',\n  '$color-base-amber-40: #eca83e',\n  '$color-base-amber-50: #e29223',\n  '$color-base-amber-60: #d47a0f',\n  '$color-base-amber-70: #c36102',\n  '$color-base-amber-80: #af4d00',\n  '$color-base-amber-90: #973a00',\n  '$color-base-amber-100: #802a00',\n  '$color-base-orange-0: #fff5f0',\n  '$color-base-orange-5: #fee3d6',\n  '$color-base-orange-10: #fdd2bd',\n  '$color-base-orange-20: #f8af8c',\n  '$color-base-orange-30: #f28f60',\n  '$color-base-orange-40: #e8723d',\n  '$color-base-orange-50: #dc5922',\n  '$color-base-orange-60: #cc430e',\n  '$color-base-orange-70: #b73002',\n  '$color-base-orange-80: #9f2500',\n  '$color-base-orange-90: #831b00',\n  '$color-base-orange-100: #661300',\n  '$color-base-red-0: #fff3f2',\n  '$color-base-red-5: #ffe2df',\n  '$color-base-red-10: #ffcfcc',\n  '$color-base-red-20: #ffa8a3',\n  '$color-base-red-30: #fd837d',\n  '$color-base-red-40: #f7635e',\n  '$color-base-red-50: #ed4745',\n  '$color-base-red-60: #e03131',\n  '$color-base-red-70: #c62222',\n  '$color-base-red-80: #a91717',\n  '$color-base-red-90: #880f0f',\n  '$color-base-red-100: #660a0a',\n  '$color-base-pink-0: #fff2f7',\n  '$color-base-pink-5: #fedde8',\n  '$color-base-pink-10: #fdc8d9',\n  '$color-base-pink-20: #f89ebc',\n  '$color-base-pink-30: #f278a1',\n  '$color-base-pink-40: #e85989',\n  '$color-base-pink-50: #dc4175',\n  '$color-base-pink-60: #cc2e63',\n  '$color-base-pink-70: #b72052',\n  '$color-base-pink-80: #9f1643',\n  '$color-base-pink-90: #830f35',\n  '$color-base-pink-100: #660a29',\n  '$color-base-magenta-0: #fff2f9',\n  '$color-base-magenta-5: #ffdeee',\n  '$color-base-magenta-10: #fec9e3',\n  '$color-base-magenta-20: #fba0cb',\n  '$color-base-magenta-30: #f57bb5',\n  '$color-base-magenta-40: #ed5ca2',\n  '$color-base-magenta-50: #e14392',\n  '$color-base-magenta-60: #d23085',\n  '$color-base-magenta-70: #bc217d',\n  '$color-base-magenta-80: #a21774',\n  '$color-base-magenta-90: #840f66',\n  '$color-base-magenta-100: #660a55',\n  '$color-base-purple-0: #f9f6ff',\n  '$color-base-purple-5: #ede5fe',\n  '$color-base-purple-10: #e2d5fd',\n  '$color-base-purple-20: #cab3f9',\n  '$color-base-purple-30: #b395f4',\n  '$color-base-purple-40: #9e7bec',\n  '$color-base-purple-50: #8a66e2',\n  '$color-base-purple-60: #7755d4',\n  '$color-base-purple-70: #6546c3',\n  '$color-base-purple-80: #533aaf',\n  '$color-base-purple-90: #432f97',\n  '$color-base-purple-100: #352680',\n  '$color-base-indigo-0: #f6f6ff',\n  '$color-base-indigo-5: #e5e5fe',\n  '$color-base-indigo-10: #d4d5fd',\n  '$color-base-indigo-20: #b3b4f8',\n  '$color-base-indigo-30: #9497f2',\n  '$color-base-indigo-40: #7980e8',\n  '$color-base-indigo-50: #636edc',\n  '$color-base-indigo-60: #5160cc',\n  '$color-base-indigo-70: #4256b7',\n  '$color-base-indigo-80: #344c9f',\n  '$color-base-indigo-90: #294283',\n  '$color-base-indigo-100: #1f3666',\n  '$color-primary-white-grey-0: #ffffff',\n  '$color-primary-jobads-cyan-40: #0697ed',\n  '$color-primary-brand-blue-60: #1971c2',\n  '$color-primary-jobs-blue-70: #0d53b0',\n  '$color-primary-candidates-mint-50: #219955',\n  '$color-primary-placements-teal-50: #30a58e',\n  '$color-primary-contacts-orange-50: #dc5922',\n  '$color-primary-companies-pink-50: #dc4175',\n  '$color-primary-applications-purple-60: #7755d4',\n  '$color-status-error-red-60: #e03131',\n  '$color-status-warning-amber-40: #eca83e',\n  '$color-status-succss-green-40: #56af38',\n]"
+                }
+            ],
             "projects/leods/src/test.ts": [
                 {
                     "name": "context",
@@ -610,6 +801,24 @@
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
                 }
+            ],
+            "projects/leods/src/lib/colors/colors.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                    "type": "Story<ColorsComponent>",
+                    "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -618,9 +827,66 @@
     },
     "routes": [],
     "coverage": {
-        "count": 4,
+        "count": 3,
         "status": "low",
         "files": [
+            {
+                "filePath": "projects/leods/src/lib/colors/color-card/color-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/colors/colors.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/colors/colors.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Color",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/colors/colors.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "colors",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
             {
                 "filePath": "projects/leods/src/lib/leods.component.ts",
                 "type": "component",

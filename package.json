@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "yarn docs:json && start-storybook -p 6006",
-    "build-storybook": "yarn docs:json && build-storybook"
+    "build-storybook": "yarn docs:json && build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +38,7 @@
     "@storybook/addon-essentials": "^6.0.22",
     "@storybook/addon-links": "^6.0.22",
     "@storybook/angular": "^6.0.22",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
