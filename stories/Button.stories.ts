@@ -23,9 +23,6 @@ Primary.args = {
 };
 Primary.parameters = {
   docs: {
-    description: {
-      component: 'some component _markdown_ test',
-    },
     source: {
       code: `<Button [primary]='true'></Button>`,
     },

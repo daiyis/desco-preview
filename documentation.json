@@ -34,7 +34,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-cca5c211c4dbd024634b5c233b71106f",
+            "id": "component-ButtonComponent-286bacee2b6dd84924531221c60b7eb6",
             "file": "stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -53,26 +53,26 @@
                 {
                     "name": "backgroundColor",
                     "description": "<p>What background color to use for test2</p>\n",
-                    "line": 30,
+                    "line": 32,
                     "type": "string"
                 },
                 {
                     "name": "label",
                     "description": "<p>Button contents</p>\n",
-                    "line": 44,
+                    "line": 46,
                     "type": "string"
                 },
                 {
                     "name": "primary",
                     "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 24,
+                    "line": 26,
                     "type": "boolean"
                 },
                 {
                     "name": "size",
                     "defaultValue": "'medium'",
                     "description": "<p>How large should the button be?</p>\n",
-                    "line": 36,
+                    "line": 38,
                     "type": "\"small\" | \"medium\" | \"large\""
                 }
             ],
@@ -81,7 +81,7 @@
                     "name": "onClick",
                     "defaultValue": "new EventEmitter<Event>()",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 50,
+                    "line": 52,
                     "type": "EventEmitter"
                 }
             ],
@@ -89,10 +89,10 @@
             "methodsClass": [],
             "hostBindings": [],
             "hostListeners": [],
-            "description": "<p>Button Component for test text</p>\n",
-            "rawdescription": "Button Component for test text",
+            "description": "<p>Button</p>\n<ul>\n<li>Primary buttons stand out on purpose. They are used to indicate primary actions used within a creation flow or preview window.</li>\n</ul>\n",
+            "rawdescription": "Button\n\n- Primary buttons stand out on purpose. They are used to indicate primary actions used within a creation flow or preview window.",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n/**\n * Button Component for test text\n *\n */\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary: boolean;\n\n  /**\n   * What background color to use for test2\n   */\n  @Input()\n  backgroundColor: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n/**\n * Button\n *\n * - Primary buttons stand out on purpose. They are used to indicate primary actions used within a creation flow or preview window.\n *\n */\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary: boolean;\n\n  /**\n   * What background color to use for test2\n   */\n  @Input()\n  backgroundColor: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -108,7 +108,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 52
+                        "line": 54
                     }
                 }
             }
@@ -329,7 +329,7 @@
         },
         {
             "name": "LeodsComponent",
-            "id": "component-LeodsComponent-02cbac19a5df154e2bcbd39b2582223f",
+            "id": "component-LeodsComponent-ed5d64df2f340586867f8a9e02a216e7",
             "file": "projects/leods/src/lib/leods.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -339,7 +339,7 @@
             "selector": "lib-leods",
             "styleUrls": [],
             "styles": [],
-            "template": "<p>\n  leods works!\n</p>\n<button nz-button nzType=\"primary\">Primary Button</button>\n<nz-select ngModel=\"lucy\" nzAllowClear nzPlaceHolder=\"Choose\">\n  <nz-option nzValue=\"lucy\" nzLabel=\"Lucy\"></nz-option>\n</nz-select>\n",
+            "template": "<button nz-button nzType=\"primary\">Primary Button</button>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [],
@@ -352,7 +352,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19
+                    "line": 11
                 }
             ],
             "hostBindings": [],
@@ -360,7 +360,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-leods',\n  template: `\n    <p>\n      leods works!\n    </p>\n    <button nz-button nzType=\"primary\">Primary Button</button>\n    <nz-select ngModel=\"lucy\" nzAllowClear nzPlaceHolder=\"Choose\">\n      <nz-option nzValue=\"lucy\" nzLabel=\"Lucy\"></nz-option>\n    </nz-select>\n  `,\n  styles: [],\n})\nexport class LeodsComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-leods',\n  template: ` <button nz-button nzType=\"primary\">Primary Button</button> `,\n  styles: [],\n})\nexport class LeodsComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -368,7 +368,7 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 16
+                "line": 8
             },
             "implements": [
                 "OnInit"
@@ -460,15 +460,51 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "NgZorroAntdModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
                     "elements": [
                         {
                             "name": "LeodsComponent"
+                        },
+                        {
+                            "name": "NgZorroAntdModule"
                         }
                     ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "NgZorroAntdModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
                 },
                 {
                     "type": "bootstrap",

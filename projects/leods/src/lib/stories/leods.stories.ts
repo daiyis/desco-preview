@@ -1,3 +1,4 @@
+import { NgZorroAntdModule } from './../nz-zorro.module';
 import { LeodsComponent } from './../leods.component';
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
@@ -12,7 +13,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [LeodsComponent],
-      imports: [NzButtonModule, NzSelectModule, BrowserAnimationsModule],
+      imports: [NgZorroAntdModule, BrowserAnimationsModule],
     }),
   ],
   argTypes: {
@@ -32,9 +33,6 @@ Primary.args = {
 };
 Primary.parameters = {
   docs: {
-    description: {
-      component: 'some component _markdown_ test',
-    },
     source: {
       code: `<Button [primary]='true'></Button>`,
     },
