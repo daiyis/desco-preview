@@ -8,7 +8,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export default {
-  title: 'JA Design System/Components/Leods',
+  title: 'JA Design System/Components/Leods-formdx',
   component: LeodsComponent,
   decorators: [
     moduleMetadata({

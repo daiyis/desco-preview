@@ -8,9 +8,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule } from './nz-zorro.module';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [LeodsComponent, ColorCardComponent, ColorsComponent],
+  declarations: [LeodsComponent, ColorCardComponent, ColorsComponent, ButtonComponent],
   imports: [NgZorroAntdModule, BrowserModule, FormsModule, HttpClientModule],
   exports: [LeodsComponent, NgZorroAntdModule],
 })

@@ -8,14 +8,17 @@ import Header from './header.component';
 import Page from './page.component';
 
 import * as HeaderStories from './Header.stories';
+import { NgZorroAntdModule } from 'projects/leods/src/lib/nz-zorro.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonComponent } from 'projects/leods/src/lib/button/button.component';
 
 export default {
   title: 'JA Design System/Components/Page',
   component: Header,
   decorators: [
     moduleMetadata({
-      declarations: [Button, Header],
-      imports: [CommonModule],
+      declarations: [ButtonComponent, Header],
+      imports: [CommonModule, NgZorroAntdModule, BrowserAnimationsModule],
     }),
   ],
 } as Meta;
