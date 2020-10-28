@@ -4,3 +4,4 @@
 
 export * from './lib/leods.component';
 export * from './lib/leods.module';
+export * from './lib/nz-zorro.module';

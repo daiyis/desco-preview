@@ -655,7 +655,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -663,7 +663,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "file": "projects/leods/src/lib/stories/leods.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -718,17 +718,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/stories/leods.stories.ts",
-                "type": "Story<LeodsComponent>",
-                "defaultValue": "(args: LeodsComponent) => ({\n  component: LeodsComponent,\n  props: args,\n})"
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "Story<ColorsComponent>",
+                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/colors/colors.stories.ts",
-                "type": "Story<ColorsComponent>",
-                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
+                "file": "projects/leods/src/lib/stories/leods.stories.ts",
+                "type": "Story<LeodsComponent>",
+                "defaultValue": "(args: LeodsComponent) => ({\n  component: LeodsComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],
