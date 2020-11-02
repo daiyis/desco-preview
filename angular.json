@@ -15,7 +15,7 @@
             "tsConfig": "projects/leods/tsconfig.lib.json",
             "project": "projects/leods/ng-package.json",
             "styles": [
-              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
+              "projects/leods/src/ng-zorro-theme.less"
             ]
           },
           "configurations": {
