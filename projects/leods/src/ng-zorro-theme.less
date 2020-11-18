@@ -1,7 +1,7 @@
 @import '../../../node_modules/ng-zorro-antd/ng-zorro-antd.less';
 
 // -------- import official less file -----------
-// @import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+// @import '../node_modules/ng-zorro-antd/ng-zorro-antd.less';
 
 // -------- JA Scales base color tokens -----------
 @grey-0: #ffffff;
@@ -58,9 +58,9 @@
 @padding-xs: 8px; // small items
 @padding-xss: 4px; // more small
 
-@border-radius-base: 8px;
-@border-radius-sm: 4px;
-@border-radius-md: @border-radius-base;
+@border-radius-base: 4px;
+@border-radius-sm: @border-radius-base;
+@border-radius-md: 8px;
 @border-radius-lg: 12px;
 
 // -------- Semantic Colors -----------
@@ -78,17 +78,18 @@
 
 @normal-color: #d9d9d9;
 
+@icon-color: inherit;
+@icon-color-hover: fade(@grey-50, 75%);
+
 @text-color: @grey-80;
 @text-color-secondary: @grey-60;
 @text-color-inverse: @white;
 
-@icon-color: inherit;
-@icon-color-hover: fade(@grey-50, 75%);
-
-@heading-color: @text-color;
 @text-color-dark: fade(@white, 85%);
 @text-color-secondary-dark: fade(@white, 65%);
 @text-selection-bg: @primary-color;
+
+@heading-color: @text-color;
 
 // Background color for `<body>`
 @body-background: @grey-0;
@@ -110,13 +111,13 @@
 @font-size-lg: @font-size-base + 2px;
 @font-size-sm: 12px;
 
-@heading-1-size: ceil(@font-size-base * 2.71);
-@heading-2-size: ceil(@font-size-base * 2.14);
-@heading-3-size: ceil(@font-size-base * 1.71);
-@heading-4-size: ceil(@font-size-base * 1.42);
-@heading-5-size: ceil(@font-size-base * 1.14);
+@heading-1-size: 36px; //ceil(@font-size-base * 2.71);
+@heading-2-size: 24px; //ceil(@font-size-base * 2.14);
+@heading-3-size: 20px; //ceil(@font-size-base * 1.71);
+@heading-4-size: 16px; //ceil(@font-size-base * 1.42);
+@heading-5-size: 12px; //ceil(@font-size-base * 1.14);
 
-@line-height-base: 1; //1.5715;
+@line-height-base: 1.5715;
 
 // vertical padding for all form controls
 @control-padding-horizontal: @padding-sm;
@@ -138,14 +139,14 @@
 @btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
 @btn-text-color: @grey-70;
 
-@btn-primary-color: #fff;
+@btn-primary-color: @text-color-inverse;
 @btn-primary-bg: @primary-color;
 
 @btn-default-color: @btn-text-color;
 @btn-default-bg: @component-background;
 @btn-default-border: @border-color-base;
 
-@btn-danger-color: #fff;
+@btn-danger-color: @text-color-inverse;
 @btn-danger-bg: @error-color;
 @btn-danger-border: @error-color;
 
@@ -248,7 +249,7 @@
 @ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base: hsv(0, 0, 85%); // base border outline a component
+@border-color-base: @grey-30; // base border outline a component
 @border-color-split: hsv(0, 0, 94%); // split border inside a component
 @border-color-inverse: @white;
 @border-width-base: 1px; // width of the border for a component
@@ -421,7 +422,7 @@
 // Form
 // ---
 @label-required-color: @highlight-color;
-@label-color: @heading-color;
+@label-color: @text-color-secondary;
 @form-warning-input-bg: @input-bg;
 @form-item-margin-bottom: 24px;
 @form-item-trailing-colon: true;
@@ -438,10 +439,10 @@
 @input-height-base: @height-base;
 @input-height-lg: @height-lg;
 @input-height-sm: @height-sm;
-@input-padding-horizontal: @control-padding-horizontal - 1px;
-@input-padding-horizontal-base: @input-padding-horizontal;
-@input-padding-horizontal-sm: @control-padding-horizontal-sm - 1px;
-@input-padding-horizontal-lg: @input-padding-horizontal;
+@input-padding-horizontal: @control-padding-horizontal-sm;
+@input-padding-horizontal-base: @input-padding-horizontal-sm;
+@input-padding-horizontal-sm: @control-padding-horizontal-sm;
+@input-padding-horizontal-lg: @input-padding-horizontal-sm;
 @input-padding-vertical-base: max(
   round((@input-height-base - @font-size-base * @line-height-base) / 2 * 10) / 10 - @border-width-base,
   3px
@@ -452,9 +453,9 @@
 );
 @input-padding-vertical-lg: ceil((@input-height-lg - @font-size-lg * @line-height-base) / 2 * 10) / 10 -
   @border-width-base;
-@input-placeholder-color: hsv(0, 0, 75%);
+@input-placeholder-color: @grey-50;
 @input-color: @text-color;
-@input-icon-color: @input-color;
+@input-icon-color: @grey-50;
 @input-border-color: @border-color-base;
 @input-bg: @component-background;
 @input-number-hover-border-color: @input-hover-border-color;
@@ -463,7 +464,7 @@
 @input-number-handler-bg: @component-background;
 @input-number-handler-border-color: @border-color-base;
 @input-addon-bg: @background-color-light;
-@input-hover-border-color: @primary-5;
+@input-hover-border-color: @primary-color;
 @input-disabled-bg: @disabled-bg;
 @input-outline-offset: 0 0;
 @input-icon-hover-color: fade(@black, 85%);
@@ -1065,128 +1066,54 @@
 
 // ----------------------------- JobAdder Button Component -----------------------------
 
-.@{btn-prefix-cls} {
-  &-text-danger {
-    color: @red-70;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: @red-0;
-      color: @red-70 !important;
-    }
-  }
-
-  &-text {
-    &:active {
-      color: @primary-color;
-    }
+.btn-primary() {
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@text-color-inverse; @blue-80; @blue-80);
   }
 }
 
-.button-variant-primary(@color; @background) {
-  .button-color(@color; @background; @background);
-
-  text-shadow: @btn-text-shadow;
-  box-shadow: @btn-primary-shadow;
-
+.btn-default() {
   &:hover,
-  &:focus {
-    & when (@theme = dark) {
-      .button-color(
-        @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
-      );
-    }
-    & when not (@theme = dark) {
-      .button-color(@color; @blue-80; @blue-80);
-    }
-  }
-
+  &:focus,
   &:active {
-    & when (@theme = dark) {
-      .button-color(
-        @color; ~`colorPalette('@{background}', 5) `; ~`colorPalette('@{background}', 5) `
-      );
-    }
-    & when not (@theme = dark) {
-      .button-color(@color; @blue-80; @blue-80);
-    }
+    border-color: @blue-60;
+    color: @blue-60;
   }
-
-  .button-disabled();
 }
 
 // danger default button style
 .btn-danger-default() {
-  .button-color(@error-color, @btn-default-bg, @error-color);
   &:hover,
-  &:focus {
-    & when (@theme = dark) {
-      .button-color(
-          ~`colorPalette('@{error-color}', 7) `; @btn-default-bg; ~`colorPalette('@{error-color}', 7)
-            `
-        );
-    }
-    & when not (@theme = dark) {
-      .button-color(@color; @red-80; @red-80) !important;
-      color: @text-color-inverse !important;
-    }
-  }
+  &:focus,
   &:active {
-    & when (@theme = dark) {
-      .button-color(
-          ~`colorPalette('@{error-color}', 5) `; @btn-default-bg; ~`colorPalette('@{error-color}', 5)
-            `
-        );
-    }
-    & when not (@theme = dark) {
-      .button-color(@color; @red-80; @red-80) !important;
-      color: @text-color-inverse !important;
-    }
+    .button-color(@text-color-inverse; @red-80; @red-80) !important;
   }
-  .button-disabled();
 }
 
 // text button style
 .btn-text() {
-  .button-variant-other(@btn-default-color, transparent, transparent);
-  box-shadow: none;
+  .button-variant-other(@btn-text-color, transparent, transparent);
+
   &:hover,
-  &:focus {
-    color: @btn-default-color;
-    background: @btn-text-hover-bg;
-    border-color: transparent;
-  }
-
+  &:focus,
   &:active {
-    color: @btn-default-color;
-    background: fadein(@btn-text-hover-bg, 1%);
-    border-color: transparent;
+    .button-color(@btn-text-color; @grey-20; transparent);
   }
-
-  .button-disabled(@disabled-color; transparent; transparent);
 }
 
 .btn-danger-text() {
-  .button-variant-other(@error-color, transparent, transparent);
-  box-shadow: none;
   &:hover,
-  &:focus {
-    & when (@theme = dark) {
-      .button-color(~`colorPalette('@{error-color}', 7) `; @btn-text-hover-bg; transparent);
-    }
-    & when not (@theme = dark) {
-      .button-color(@error-color; @red-0; transparent) !important;
-    }
-  }
-
+  &:focus,
   &:active {
-    & when (@theme = dark) {
-      .button-color(~`colorPalette('@{error-color}', 5) `; fadein(@btn-text-hover-bg, 1%); transparent);
-    }
-    & when not (@theme = dark) {
-      .button-color(@error-color; fadein(@red-0, 1%); transparent) !important;
-    }
+    .button-color(@error-color; @red-0; transparent) !important;
   }
-  .button-disabled(@disabled-color; transparent; transparent);
+}
+
+// ----------------------------- JobAdder Typography Styles -----------------------------
+
+h3.ant-typography,
+.ant-typography h3 {
+  font-weight: 500;
 }

@@ -1,0 +1,65 @@
+​
+<nz-divider nzText="Input Component"></nz-divider>
+​
+<div><input nz-input placeholder="Basic usage" ngModel="value" /></div>
+<div><input nz-input placeholder="Basic usage" ngModel="value" disabled="true" /></div>
+​
+<div>
+  <nz-input-group nzAddOnBefore="Http://">
+    <input type="text" nz-input />
+  </nz-input-group>
+</div>
+​
+<div>
+  <nz-input-group nzCompact>
+    <nz-select style="width: 15%;">
+      <nz-option nzLabel="Zhejiang" nzValue="Zhejiang"></nz-option>
+      <nz-option nzLabel="Jiangsu" nzValue="Jiangsu"></nz-option>
+    </nz-select>
+    <input type="text" nz-input value="Xihu District, Hangzhou" style="width: 85%;" />
+  </nz-input-group>
+</div>
+​
+<div>
+  <nz-input-group [nzSuffix]="suffixIconSearch">
+    <input type="text" nz-input placeholder="input search text" />
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    <i nz-icon nzType="search"></i>
+  </ng-template>
+</div>
+<div>
+  <textarea nz-input placeholder="Autosize height based on content lines" nzAutosize></textarea>
+  <textarea
+    nz-input
+    placeholder="Autosize height with minimum and maximum number of lines"
+    [nzAutosize]="{ minRows: 2, maxRows: 6 }"
+  ></textarea>
+</div>
+​
+<form nz-form [formGroup]="validateForm" nzLayout="vertical" style="width: 50%;" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label>Username</nz-form-label>
+    <nz-form-control nzErrorTip="Please input your username!">
+      <input nz-input formControlName="userName" placeholder="Enter your usernname" />
+    </nz-form-control>
+  </nz-form-item>
+  ​
+  <nz-form-item>
+    <nz-form-label>Email</nz-form-label>
+    <nz-form-control nzErrorTip="Please input your email!">
+      <input nz-input formControlName="email" placeholder="Enter your email address" />
+    </nz-form-control>
+  </nz-form-item>
+  ​
+  <nz-form-item>
+    <nz-form-label>Password</nz-form-label>
+    <nz-form-control nzErrorTip="Please input your password!">
+      <input nz-input formControlName="password" placeholder="Enter your password" disabled="true" />
+    </nz-form-control>
+  </nz-form-item>
+  ​
+  <nz-form-item>
+    <button nz-button nzType="primary">Submit</button>
+  </nz-form-item>
+</form>

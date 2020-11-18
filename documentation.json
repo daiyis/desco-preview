@@ -128,7 +128,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".primary {\n  background: #1971c2;\n  box-shadow: 0px 2px 2px rgba(34, 43, 61, 0.1);\n  border-radius: 4px;\n}\n",
+                    "data": "/* .primary {\n  background: #1971c2;\n  box-shadow: 0px 2px 2px rgba(34, 43, 61, 0.1);\n  border-radius: 4px;\n} */\n\ndiv {\n  margin: 6px;\n}\nbutton {\n  margin: 4px;\n}\n",
                     "styleUrl": "./button.component.css"
                 }
             ],
@@ -142,7 +142,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button class=\"primary\" nz-button nzType=\"primary\" (click)=\"click($event)\">Button</button>\n"
+            "templateData": "<!-- <button nz-button nzType=\"primary\" (click)=\"click($event)\">Button</button> -->\n\n<div>\n  <button nz-button nzType=\"primary\">Primary Button</button>\n  <button nz-button nzType=\"primary\">Button<i nz-icon nzType=\"down\"></i></button>\n  <button nz-button nzType=\"primary\"><i nz-icon nzType=\"plus\"></i>Button</button>\n  <button nz-button nzType=\"primary\" disabled=\"true\">Primary Button</button>\n</div>\n<div>\n  <button nz-button nzType=\"default\">Default Button</button>\n  <button nz-button nzType=\"default\">Default Button<i nz-icon nzType=\"down\"></i></button>\n  <button nz-button nzType=\"default\"><i nz-icon nzType=\"plus\"></i>Default Button</button>\n  <button nz-button nzType=\"default\" disabled=\"true\">Default Button</button>\n</div>\n<div>\n  <button nz-button nzType=\"text\">Text Button</button>\n  <button nz-button nzType=\"text\">Text Button<i nz-icon nzType=\"down\"></i></button>\n  <button nz-button nzType=\"text\"><i nz-icon nzType=\"plus\"></i>Text Button</button>\n  <button nz-button nzType=\"text\" disabled=\"true\">Text Button</button>\n</div>\n<div>\n  <a nz-button nzType=\"link\">Link Button</a>\n  <a nz-button nzType=\"link\">Link Button<i nz-icon nzType=\"down\"></i></a>\n  <a nz-button nzType=\"link\"><i nz-icon nzType=\"plus\"></i>Link Button</a>\n</div>\n<div>\n  <button nz-button nzType=\"primary\" nzDanger=\"true\">Destructive Button</button>\n  <button nz-button nzType=\"primary\" nzDanger=\"true\">Destructive Button</button>\n  <button nz-button nzType=\"primary\" disabled=\"true\">Destructive Button</button>\n  <button nz-button nzType=\"text\" nzDanger=\"true\">Text Button</button>\n</div>\n<div>\n  <button nz-button nzType=\"default\"><i nz-icon nzType=\"search\"></i></button>\n</div>\n"
         },
         {
             "name": "ColorCardComponent",
@@ -359,6 +359,92 @@
             "stylesData": ""
         },
         {
+            "name": "InputComponent",
+            "id": "component-InputComponent-693825dae458fecf4a3cf7751260f13d",
+            "file": "projects/leods/src/lib/input/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-input",
+            "styleUrls": [
+                "./input.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "validateForm",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14
+                },
+                {
+                    "name": "submitForm",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'lib-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css'],\n})\nexport class InputComponent implements OnInit {\n  validateForm!: FormGroup;\n\n  constructor(private fb: FormBuilder) {}\n\n  ngOnInit(): void {\n    this.validateForm = this.fb.group({\n      userName: [null, [Validators.required]],\n      email: [null, [Validators.required]],\n      password: [null, [Validators.required]],\n      remember: [true],\n    });\n  }\n\n  submitForm(): void {\n    for (const i in this.validateForm.controls) {\n      this.validateForm.controls[i].markAsDirty();\n      this.validateForm.controls[i].updateValueAndValidity();\n    }\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder"
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "​\n<nz-divider nzText=\"Input Component\"></nz-divider>\n​\n<div><input nz-input placeholder=\"Basic usage\" ngModel=\"value\" /></div>\n<div><input nz-input placeholder=\"Basic usage\" ngModel=\"value\" disabled=\"true\" /></div>\n​\n<div>\n  <nz-input-group nzAddOnBefore=\"Http://\">\n    <input type=\"text\" nz-input />\n  </nz-input-group>\n</div>\n​\n<div>\n  <nz-input-group nzCompact>\n    <nz-select style=\"width: 15%;\">\n      <nz-option nzLabel=\"Zhejiang\" nzValue=\"Zhejiang\"></nz-option>\n      <nz-option nzLabel=\"Jiangsu\" nzValue=\"Jiangsu\"></nz-option>\n    </nz-select>\n    <input type=\"text\" nz-input value=\"Xihu District, Hangzhou\" style=\"width: 85%;\" />\n  </nz-input-group>\n</div>\n​\n<div>\n  <nz-input-group [nzSuffix]=\"suffixIconSearch\">\n    <input type=\"text\" nz-input placeholder=\"input search text\" />\n  </nz-input-group>\n  <ng-template #suffixIconSearch>\n    <i nz-icon nzType=\"search\"></i>\n  </ng-template>\n</div>\n<div>\n  <textarea nz-input placeholder=\"Autosize height based on content lines\" nzAutosize></textarea>\n  <textarea\n    nz-input\n    placeholder=\"Autosize height with minimum and maximum number of lines\"\n    [nzAutosize]=\"{ minRows: 2, maxRows: 6 }\"\n  ></textarea>\n</div>\n​\n<form nz-form [formGroup]=\"validateForm\" nzLayout=\"vertical\" style=\"width: 50%;\" (ngSubmit)=\"submitForm()\">\n  <nz-form-item>\n    <nz-form-label>Username</nz-form-label>\n    <nz-form-control nzErrorTip=\"Please input your username!\">\n      <input nz-input formControlName=\"userName\" placeholder=\"Enter your usernname\" />\n    </nz-form-control>\n  </nz-form-item>\n  ​\n  <nz-form-item>\n    <nz-form-label>Email</nz-form-label>\n    <nz-form-control nzErrorTip=\"Please input your email!\">\n      <input nz-input formControlName=\"email\" placeholder=\"Enter your email address\" />\n    </nz-form-control>\n  </nz-form-item>\n  ​\n  <nz-form-item>\n    <nz-form-label>Password</nz-form-label>\n    <nz-form-control nzErrorTip=\"Please input your password!\">\n      <input nz-input formControlName=\"password\" placeholder=\"Enter your password\" disabled=\"true\" />\n    </nz-form-control>\n  </nz-form-item>\n  ​\n  <nz-form-item>\n    <button nz-button nzType=\"primary\">Submit</button>\n  </nz-form-item>\n</form>\n"
+        },
+        {
             "name": "LeodsComponent",
             "id": "component-LeodsComponent-fdb88cbf60e0a1cb37856db1b9185f5c",
             "file": "projects/leods/src/lib/leods.component.ts",
@@ -514,6 +600,9 @@
                             "name": "ColorsComponent"
                         },
                         {
+                            "name": "InputComponent"
+                        },
+                        {
                             "name": "LeodsComponent"
                         }
                     ]
@@ -599,6 +688,14 @@
                 "name": "Ghost",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Ghost",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/leods/src/lib/button/button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -647,7 +744,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/button/button.stories.ts",
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -655,7 +752,15 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "file": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/button/button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -673,6 +778,14 @@
                 "subtype": "variable",
                 "file": "projects/leods/src/test.ts",
                 "type": "literal type"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Secondary",
@@ -710,17 +823,25 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/button/button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "Story<ColorsComponent>",
+                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/colors/colors.stories.ts",
-                "type": "Story<ColorsComponent>",
-                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
+                "file": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(args: InputComponent) => ({\n  component: InputComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/button/button.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -760,6 +881,40 @@
                     "subtype": "variable",
                     "file": "projects/leods/src/test.ts",
                     "type": "literal type"
+                }
+            ],
+            "projects/leods/src/lib/input/input.stories.ts": [
+                {
+                    "name": "Ghost",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/input/input.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/input/input.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/input/input.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/input/input.stories.ts",
+                    "type": "Story<InputComponent>",
+                    "defaultValue": "(args: InputComponent) => ({\n  component: InputComponent,\n  props: args,\n})"
                 }
             ],
             "projects/leods/src/lib/button/button.stories.ts": [
@@ -907,7 +1062,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1012,6 +1167,55 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "colors",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Ghost",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
