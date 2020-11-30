@@ -1,4 +1,5 @@
-import '!style-loader!css-loader!less-loader!./../projects/leods/src/ng-zorro-theme.less';
+
+import './../projects/leods/src/ng-zorro-theme.less';
 import { setCompodocJson } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 setCompodocJson(docJson);

@@ -20,10 +20,8 @@
             "production": {
               "tsConfig": "projects/leods/tsconfig.lib.prod.json"
             }
-          },
-          "styles": [
-            "projects/leods/src/ng-zorro-theme.less"
-          ]
+          }
+          
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",

@@ -744,14 +744,6 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/colors/colors.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/leods/src/lib/button/button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -761,6 +753,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/leods/src/lib/input/input.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -823,14 +823,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/colors/colors.stories.ts",
-                "type": "Story<ColorsComponent>",
-                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/leods/src/lib/button/button.stories.ts",
                 "type": "Story<ButtonComponent>",
                 "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
@@ -842,6 +834,14 @@
                 "file": "projects/leods/src/lib/input/input.stories.ts",
                 "type": "Story<InputComponent>",
                 "defaultValue": "(args: InputComponent) => ({\n  component: InputComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "Story<ColorsComponent>",
+                "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
             },
             {
                 "name": "Template",
