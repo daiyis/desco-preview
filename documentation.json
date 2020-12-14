@@ -688,14 +688,6 @@
                 "name": "Ghost",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/button/button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Ghost",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/leods/src/lib/input/input.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -744,14 +736,6 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/button/button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/leods/src/lib/input/input.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -761,6 +745,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/leods/src/lib/colors/colors.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/button/button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -783,7 +775,7 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/button/button.stories.ts",
+                "file": "projects/leods/src/lib/input/input.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -791,7 +783,7 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/input/input.stories.ts",
+                "file": "projects/leods/src/lib/button/button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -823,14 +815,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/leods/src/lib/button/button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/leods/src/lib/input/input.stories.ts",
                 "type": "Story<InputComponent>",
                 "defaultValue": "(args: InputComponent) => ({\n  component: InputComponent,\n  props: args,\n})"
@@ -842,6 +826,14 @@
                 "file": "projects/leods/src/lib/colors/colors.stories.ts",
                 "type": "Story<ColorsComponent>",
                 "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/leods/src/lib/button/button.stories.ts",
+                "type": "Story<NzButtonComponent>",
+                "defaultValue": "(args: NzButtonComponent) => ({\n  component: NzButtonComponent,\n  props: args,\n  template: '<button nz-button nzType=\"primary\">Primary Button</button>',\n})"
             },
             {
                 "name": "Template",
@@ -881,40 +873,6 @@
                     "subtype": "variable",
                     "file": "projects/leods/src/test.ts",
                     "type": "literal type"
-                }
-            ],
-            "projects/leods/src/lib/button/button.stories.ts": [
-                {
-                    "name": "Ghost",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/leods/src/lib/button/button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/leods/src/lib/button/button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/leods/src/lib/button/button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/leods/src/lib/button/button.stories.ts",
-                    "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
                 }
             ],
             "projects/leods/src/lib/input/input.stories.ts": [
@@ -1054,6 +1012,32 @@
                     "type": "Story<ColorsComponent>",
                     "defaultValue": "(args: ColorsComponent) => ({\n  component: ColorsComponent,\n  props: args,\n})"
                 }
+            ],
+            "projects/leods/src/lib/button/button.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/button/button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/button/button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/leods/src/lib/button/button.stories.ts",
+                    "type": "Story<NzButtonComponent>",
+                    "defaultValue": "(args: NzButtonComponent) => ({\n  component: NzButtonComponent,\n  props: args,\n  template: '<button nz-button nzType=\"primary\">Primary Button</button>',\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -1073,16 +1057,6 @@
                 "coveragePercent": 66,
                 "coverageCount": "6/9",
                 "status": "good"
-            },
-            {
-                "filePath": "projects/leods/src/lib/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Ghost",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
             },
             {
                 "filePath": "projects/leods/src/lib/button/button.stories.ts",

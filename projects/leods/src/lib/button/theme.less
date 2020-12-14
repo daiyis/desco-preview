@@ -1,0 +1,104 @@
+// Buttons
+@btn-font-weight: 600;
+@btn-border-radius-base: @border-radius-sm;
+@btn-border-radius-sm: @border-radius-sm;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+@btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+@btn-text-color: @grey-70;
+
+@btn-primary-color: @text-color-inverse;
+@btn-primary-bg: @primary-color;
+
+@btn-default-color: @btn-text-color;
+@btn-default-bg: @component-background;
+@btn-default-border: @border-color-base;
+
+@btn-danger-color: @text-color-inverse;
+@btn-danger-bg: @error-color;
+@btn-danger-border: @error-color;
+
+@btn-disable-color: @disabled-color;
+@btn-disable-bg: @disabled-bg;
+@btn-disable-border: transparent; //@border-color-base;
+
+@btn-default-ghost-color: @component-background;
+@btn-default-ghost-bg: transparent;
+@btn-default-ghost-border: @component-background;
+
+@btn-font-size-lg: @font-size-lg;
+@btn-font-size-sm: @font-size-base;
+
+@btn-padding-horizontal-base: @padding-sm;
+@btn-padding-horizontal-lg: @btn-padding-horizontal-base;
+@btn-padding-horizontal-sm: @padding-xs - 1px;
+
+@btn-height-base: @height-base;
+@btn-height-lg: @height-lg;
+@btn-height-sm: @height-sm;
+
+@btn-line-height: @line-height-base;
+
+@btn-circle-size: @btn-height-base;
+@btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-sm: @btn-height-sm;
+
+@btn-square-size: @btn-height-base;
+@btn-square-size-lg: @btn-height-lg;
+@btn-square-size-sm: @btn-height-sm;
+@btn-square-only-icon-size: @font-size-base + 2px;
+@btn-square-only-icon-size-sm: @font-size-base;
+@btn-square-only-icon-size-lg: @btn-font-size-lg + 2px;
+
+@btn-group-border: @primary-5;
+
+@btn-link-hover-bg: transparent;
+@btn-text-hover-bg: @grey-20; //rgba(0, 0, 0, 0.018);
+
+// mixins
+.btn-primary() {
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@text-color-inverse; @blue-80; @blue-80);
+  }
+}
+
+.btn-default() {
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @blue-60;
+    color: @blue-60;
+  }
+}
+
+// danger default button style
+.btn-danger-default() {
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@text-color-inverse; @red-80; @red-80) !important;
+  }
+}
+
+// text button style
+.btn-text() {
+  .button-variant-other(@btn-text-color, transparent, transparent);
+
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@btn-text-color; @grey-20; transparent);
+  }
+}
+
+.btn-danger-text() {
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@error-color; @red-0; transparent) !important;
+  }
+}
